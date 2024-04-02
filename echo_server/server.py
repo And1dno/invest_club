@@ -1,26 +1,36 @@
 import socket
 import threading
 
+def handle_client(client_socket):
+    try:
+        while True:
+            # Прием данных от клиента
+            request = client_socket.recv(1024)
+            if not request:
+                # Клиент прервал соединение
+                break
+            print(f"Получено от клиента: {request.decode('utf-8')}")
 
-def client_handler(client_socket):
-    request = client_socket.recv(1024)
-    print(f"Сообщение от клиента: {request.decode('utf-8')}")
+            # Отправка данных клиенту (эхо)
+            client_socket.send(request)
 
-    if (request.decode('utf-8')!="exit"):
-        client_socket.send(request)
-    else:
-        client_socket.send("Соединение разорвано")
+    except Exception as e:
+        print(f"Произошла ошибка: {e}")
+
+    finally:
+        # Закрытие соединения с клиентом
+        print("Закрытие соединения с клиентом.")
         client_socket.close()
 
-
-def start_server():
+'''def start_server():
     server_ip = "localhost"
-    server_port = 2004
+    server_port = 12345
 
+    # Создание сокета
     server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     server_socket.bind((server_ip, server_port))
+    server_socket.listen(5)
 
-    server_socket.listen(7)
     print(f"Сервер запущен на {server_ip}:{server_port}")
 
     while True:
@@ -28,9 +38,9 @@ def start_server():
         print(f"Подключение клиента: {addr[0]}:{addr[1]}")
 
         # Создание отдельного потока для обработки клиента
-        client = threading.Thread(target=client_handler, args=(client_socket,))
-        client.start()
-
+        client_handler = threading.Thread(target=handle_client, args=(client_socket,))
+        client_handler.start()
 
 if __name__ == "__main__":
     start_server()
+'''
