@@ -1,4 +1,5 @@
-# Developers: Ildar Salakhutdinov, Presnyakov Andrey, Maxim, and Davud Davudov
+# Developers: Ildar Salakhutdinov, Presnyakov Andrey,Kozlov Maxim, and Davud Davudov
+#PI22-1V
 
 ## Description
 This project is developed by a team of second-year computer science students. The team consists of talented developers Ildar Salakhutdinov, Presnyakov Andrey, Maxim, and Davud Davudov. They have successfully created a file manager application and are currently working on building an echo server.
