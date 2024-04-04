@@ -3,8 +3,8 @@ import shutil
 
 working_directory = '' #чтобы программа работала нужно ввести в терминале pwd и полученную строку вставить в значение этой переменной
 
-#Davud
-'''
+#Andrey
+
 def create_folder(folder_name):
     folder_path = os.path.join(working_directory, folder_name)
     os.mkdir(folder_path)
@@ -33,8 +33,8 @@ def change_folder(folder_name):
         else:
             print(f"Папки не существует")
 
-'''
-#Andrey
+
+#Davud
 '''def create_file(file_name):
     file_path = os.path.join(working_directory, file_name)
     with open(file_path, 'w'):
