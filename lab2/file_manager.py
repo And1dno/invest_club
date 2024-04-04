@@ -1,7 +1,7 @@
 import os
 import shutil
 
-working_directory = '' #чтобы программа работала нужно ввести в терминале pwd и полученную строку вставить в значение этой переменной
+working_directory = 'C/Users/tfric/Desktop/Proga/invest_club/lab2' #чтобы программа работала нужно ввести в терминале pwd и полученную строку вставить в значение этой переменной
 
 #Andrey
 
@@ -35,7 +35,7 @@ def change_folder(folder_name):
 
 
 #Davud
-'''def create_file(file_name):
+def create_file(file_name):
     file_path = os.path.join(working_directory, file_name)
     with open(file_path, 'w'):
         pass
@@ -60,10 +60,10 @@ def delete_file(file_name):
     file_path = os.path.join(working_directory, file_name)
     os.remove(file_path)
     print(f"Файл {file_name} удален")
-'''
+
 
 #Ildar
-'''
+
 def copy_file(source_file, destination_folder):
     source_path = os.path.join(working_directory, source_file)
     destination_path = os.path.join(working_directory, destination_folder, source_file)
@@ -89,10 +89,10 @@ def fileslist():
     files = os.listdir(working_directory)
     for file in files:
         print(file)
-'''
+
 
 #Отсюда я, пните когда запушите все куски кода чтобы я мог собрать основную часть работы
-'''
+
 mode = 0
 while mode != -1:
     try:
@@ -152,4 +152,4 @@ while mode != -1:
         else:
             print("Неизвестная команда")
     except:
-        print('неправильный формат ввода')'''
+        print('неправильный формат ввода')
