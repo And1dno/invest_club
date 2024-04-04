@@ -29,7 +29,7 @@ def handle_client(client_socket):
     # Создание сокета
     server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     server_socket.bind((server_ip, server_port))
-    server_socket.listen(5)
+    server_socket.listen(1)
 
     print(f"Сервер запущен на {server_ip}:{server_port}")
 
