@@ -3,7 +3,6 @@ import threading
 
 '''HOST = 'localhost'
 PORT = 12344
-
 clients = []
 current_client = None
 
