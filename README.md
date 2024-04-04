@@ -1,66 +1,23 @@
-# File Manager
+# Developers: Ildar Salakhutdinov, Presnyakov Andrey, Maxim, and Davud Davudov
 
-This Python-based file manager allows users to create, delete, and move folders.
+## Description
+This project is developed by a team of second-year computer science students. The team consists of talented developers Ildar Salakhutdinov, Presnyakov Andrey, Maxim, and Davud Davudov. They have successfully created a file manager application and are currently working on building an echo server.
 
-## Features
+The file manager provides users with basic file management functionalities such as creating, deleting, and moving files and directories. It also includes features for file search and modification.
 
-1. Create folders: Users can create new folders within the current directory.
-2. Delete folders: Users can delete existing folders.
-3. Move folders: Users can move folders to a different location within the file system.
+The echo server, which is currently under development, aims to establish a communication protocol where the server echoes back any message it receives from the client. This will involve socket programming and network communication concepts.
 
-## Installation
+## Technologies Used
+The file manager is built using Python and utilizes the Tkinter library for the graphical user interface.
 
-To use the file manager, follow these steps:
+The echo server is being developed using Python's socket module for networking capabilities.
 
-1. Clone the repository:
-   
-Bash
+## How to Use the File Manager
+1. Clone the repository to your local machine.
+2. Run the file_manager.py file using Python to launch the application.
+3. Use the interface to navigate through files and perform desired operations.
 
-   git clone https://github.com/yourusername/file_manager.git
-   
+## Future Work
+The team plans to further enhance the file manager by adding more advanced file manipulation features and improving the user interface. Additionally, they aim to complete the development of the echo server and integrate it with the file manager.
 
-2. Navigate to the project directory:
-   
-Bash
-
-   cd file_manager
-   
-
-3. Run the file manager:
-   
-Bash
-
-   python file_manager.py
-   
-
-## Usage
-
-Upon running the file manager, users can interact with the following commands:
-
-- create_folder: Create a new folder in the current directory.
-- delete_folder: Delete a specified folder.
-- move_folder: Move a folder to a different location.
-
-Example usage:
-Python
-
-# Create a new folder
-create_folder("NewFolder")
-
-# Delete an existing folder
-delete_folder("OldFolder")
-
-# Move a folder to a different location
-move_folder("FolderToMove", "DestinationPath")
-
-## Dependencies
-
-This project requires Python 3.x to be installed on your machine.
-
-## Contributions
-
-Contributions are welcome! If you have any suggestions or improvements, feel free to open an issue or create a pull request.
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
+Please feel free to reach out to the team for any inquiries or collaboration opportunities.
