@@ -4,7 +4,7 @@ import threading
 HOST = 'localhost'
 PORT = 12344
 
-'''def handle_client(conn, addr):
+def handle_client(conn, addr):
     print('Подключен клиент:', addr)
     with conn:
         while True:
@@ -29,4 +29,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-'''
