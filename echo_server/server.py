@@ -22,7 +22,7 @@ def handle_client(client_socket):
         print("Закрытие соединения с клиентом.")
         client_socket.close()
 
-'''def start_server():
+def start_server():
     server_ip = "localhost"
     server_port = 12345
 
@@ -43,4 +43,3 @@ def handle_client(client_socket):
 
 if __name__ == "__main__":
     start_server()
-'''
