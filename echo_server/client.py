@@ -1,4 +1,4 @@
-'''import socket
+import socket
 
 def start_client():
     server_ip = "localhost"
@@ -24,4 +24,3 @@ def start_client():
 
 if __name__ == "__main__":
     start_client()
-'''
