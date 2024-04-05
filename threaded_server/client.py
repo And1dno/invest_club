@@ -1,7 +1,7 @@
 import socket
 import threading
 
-'''HOST = 'localhost'
+HOST = 'localhost'
 PORT = 12344
 clients = []
 current_client = None
@@ -31,7 +31,7 @@ def switch_client():
             return clients[int(choice) - 1]
         else:
             print("Некорректный ввод. Пожалуйста, введите номер доступного клиента.")
-'''
+
 def main():
     global current_client
     num_clients = int(input("Введите количество клиентов: "))
