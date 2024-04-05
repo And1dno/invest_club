@@ -1,4 +1,4 @@
-# Developers: Ildar Salakhutdinov, Presnyakov Andrey,Kozlov Maxim, and Davud Davudov
+# Developers: Ildar Salakhutdinov(SLX1669), Presnyakov Andrey(And1dno), Kozlov Maxim(VayoleAguero), and Davud Davudov(Davudoff)
 # PI22-1V
 
 ## Description
