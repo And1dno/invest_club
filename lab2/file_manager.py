@@ -63,7 +63,7 @@ def delete_file(file_name):
 
 
 #Ildar
-'''
+
 def copy_file(source_file, destination_folder):
     source_path = os.path.join(working_directory, source_file)
     destination_path = os.path.join(working_directory, destination_folder, source_file)
@@ -89,7 +89,6 @@ def fileslist():
     files = os.listdir(working_directory)
     for file in files:
         print(file)
-'''
 
 #Отсюда я, пните когда запушите все куски кода чтобы я мог собрать основную часть работы
 '''
