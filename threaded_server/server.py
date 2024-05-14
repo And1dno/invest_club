@@ -28,4 +28,8 @@ def main():
             thread.start()
 
 if __name__ == "__main__":
+<<<<<<< HEAD
     main()
+=======
+    main()
+>>>>>>> 7ba3ea5c3f467e6ca9d65e9ff3a002d27a6e26c0

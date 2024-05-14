@@ -60,7 +60,14 @@ def delete_file(file_name):
     file_path = os.path.join(working_directory, file_name)
     os.remove(file_path)
     print(f"Файл {file_name} удален")
+<<<<<<< HEAD
 
+=======
+
+
+#Ildar
+
+>>>>>>> 7ba3ea5c3f467e6ca9d65e9ff3a002d27a6e26c0
 def copy_file(source_file, destination_folder):
     source_path = os.path.join(working_directory, source_file)
     destination_path = os.path.join(working_directory, destination_folder, source_file)
@@ -87,7 +94,10 @@ def fileslist():
     for file in files:
         print(file)
 
+<<<<<<< HEAD
 #Отсюда я, пните когда запушите все куски кода чтобы я мог собрать основную часть работы
+=======
+>>>>>>> 7ba3ea5c3f467e6ca9d65e9ff3a002d27a6e26c0
 mode = 0
 while mode != -1:
     try:
