@@ -2,8 +2,8 @@ import socket
 import threading
 
 
-'''class Server:
-    def __init__(self, host='127.0.0.1', port=55555):
+class Server:
+    def __init__(self, host='192.168.56.1', port=55555):
         self.host = host
         self.port = port
         self.server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -52,4 +52,3 @@ import threading
 
 server = Server()
 server.receive()
-'''
