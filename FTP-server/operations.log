@@ -1,0 +1,46 @@
+User admin request: users
+User admin request: setquota user1 5000
+User admin request: deluser user2
+User user1 request: ls
+User user1 request: upload test.txt
+User user1 request: mkdir papka
+User user1 request: rmdir papka
+User user1 request: git branch
+User user1 request: exit
+User user2 request: ls
+User user2 request: upload test1.txt
+User user2 request: exit
+User admin request: ls
+User admin request: users
+User admin request: exit
+User admin request: ls
+User admin request: users
+User admin request: exit
+User admin request: users
+User admin request: setquota user1 5000
+User admin request: deluser user2
+User admin request: ls
+User user2 request: exit
+User admin request: exit
+User admin request: exit
+User user2 request: ls
+User user2 request: upload test1.txt
+User user2 request: exit
+User admin request: exit
+User user1 request: exit
+User admin request: users
+User admin request: setquota user1 5000
+User admin request: deluser user2
+User admin request: ls
+User admin request: mkdir test_folder
+User user1 request: mkdir papka
+User user1 request: exit
+User user1 request: exit
+User admin request: users
+User admin request: exit
+User admin request: ls
+User admin request: users
+User admin request: users
+User admin request: adduser user3 password3 1024
+User admin request: users
+User admin request: exit
