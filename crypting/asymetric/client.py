@@ -4,7 +4,7 @@ import random
 import rsa
 
 HOST = 'localhost'
-PORT = 8082
+PORT = 9999
 
 # Генерируем ключи клиента
 public_key, private_key = rsa.newkeys(1024)

@@ -3,7 +3,7 @@ import pickle
 import rsa
 
 HOST = 'localhost'
-PORT = 8083
+PORT = 9999
 
 # Генерируем ключи сервера
 public_key, private_key = rsa.newkeys(1024)
@@ -19,7 +19,6 @@ with socket.socket() as sock:
 
     # Отправляем открытый ключ сервера
     conn.send(pickle.dumps(public_key))
-
     # Принимаем зашифрованное сообщение
     encrypted_message = conn.recv(1024)
     message = rsa.decrypt(encrypted_message, private_key)
