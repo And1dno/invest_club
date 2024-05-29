@@ -32,18 +32,22 @@ if not os.path.exists(USERS_DIR):
 
 # Простая база данных пользователей
 users_db = {
-    'admin': {'password': 'admin', 'role': 'admin', 'quota': None},  # Квота None для неограниченного пространства
-    'user1': {'password': 'password1', 'role': 'user', 'quota': 10 * 1024},  # 10KB quota for testing
+    'admin': {'password': 'admin', 'role': 'admin', 'quota': 100 * 1024},  # Квота None для неограниченного пространства
+    'user1': {'password': 'password1', 'role': 'user', 'quota': 1},  # 10KB quota for testing
     'user2': {'password': 'password2', 'role': 'user', 'quota': 20 * 1024}  # 20KB quota for testing
 }
 
 # Функция для проверки использования квоты
-def check_quota(user_dir, username):
+def get_used_space(user_dir):
     total_size = 0
     for dirpath, dirnames, filenames in os.walk(user_dir):
         for f in filenames:
             fp = os.path.join(dirpath, f)
             total_size += os.path.getsize(fp)
+    return total_size
+
+def check_quota(user_dir, username):
+    total_size = get_used_space(user_dir)
     quota = users_db[username]['quota']
     if quota:
         logger.info(f"User {username} is using {total_size} out of {quota} bytes.")
@@ -99,31 +103,38 @@ def process_request(client_socket, username):
             
             elif command == 'mkdir' and len(args) == 1:
                 os.makedirs(os.path.join(user_dir, args[0]))
+                response = "folder created"
+                client_socket.send(response.encode())
             
             elif command == 'rmdir' and len(args) == 1:
                 shutil.rmtree(os.path.join(user_dir, args[0]))
+                response = "folder deleated"
+                client_socket.send(response.encode())
             
             elif command == 'rm' and len(args) == 1:
                 os.remove(os.path.join(user_dir, args[0]))
+                response = "file deleated"
+                client_socket.send(response.encode())
             
             elif command == 'rename' and len(args) == 1:
                 old_name, new_name = args[0].split()
                 os.rename(os.path.join(user_dir, old_name), os.path.join(user_dir, new_name))
             
             elif command == 'upload' and len(args) == 1:
-                if not check_quota(user_dir, username):
-                    client_socket.send("Quota exceeded. Upload failed.\n".encode())
-                    continue
                 filename = args[0]
                 filecontent = receive_large_data(client_socket)
                 filepath = os.path.join(user_dir, filename)
+                file_size = len(filecontent)
+
+                # Check quota before writing the file
+                if get_used_space(user_dir) + file_size > users_db[username]['quota']:
+                    client_socket.send("Quota exceeded. Upload failed.\n".encode())
+                    continue
+
                 with open(filepath, 'w') as f:
                     f.write(filecontent)
-                if not check_quota(user_dir, username):
-                    os.remove(filepath)
-                    response = "Quota exceeded. Upload failed."
-                else:
-                    response = f"File '{filename}' uploaded."
+                
+                response = f"File '{filename}' uploaded."
                 client_socket.send(response.encode())
             
             elif command == 'download' and len(args) == 1:
@@ -220,8 +231,8 @@ def start_server(host='localhost', port=9091):
 
 if __name__ == '__main__':
     # Пример регистрации новых пользователей
-    register_user('user1', 'password1', quota=10*1024)  # 10KB quota for testing
+    register_user('user1', 'password1', quota=1)  # 10KB quota for testing
     register_user('user2', 'password2', quota=20*1024)  # 20KB quota for testing
-    register_user('admin', 'admin', role='admin')  # Admin user with no quota
+    register_user('admin', 'admin', role='admin', quota=100*1024)  # Admin user with no quota
     
     start_server()

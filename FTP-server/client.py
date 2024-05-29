@@ -48,6 +48,10 @@ def start_client(host='localhost', port=9091):
             response = client_socket.recv(1024).decode()
             print(response)
         
+        else:
+            response = client_socket.recv(1024).decode()
+            print(response)
+
         if command == 'exit':
             break
 

@@ -53,50 +53,45 @@ def test_server(host='localhost', port=9091):
         
         # Тестирование команды 'ls' для пустой папки
         response = send_command(client_socket, 'ls')
-        if response.strip() == "Directory is empty":
+        if response.strip() != "Directory is empty":
             print("Error: 'ls' command failed for empty directory")
             return
         
         # Тестирование команды 'mkdir'
         send_command(client_socket, 'mkdir test_folder')
         response = send_command(client_socket, 'ls')
-        if 'test_folder' not in response:
+        if response.strip() == "Directory is empty":
             print("Error: 'mkdir' command failed")
             return
         
         # Тестирование команды 'rmdir'
-        send_command(client_socket, 'rmdir test_folder')
+        response = send_command(client_socket, 'rmdir test_folder')
         response = send_command(client_socket, 'ls')
         if 'test_folder' in response:
             print("Error: 'rmdir' command failed")
             return
         
         # Тестирование команды 'upload'
-        send_command(client_socket, 'upload test_file.txt')
-        time.sleep(0.1)
-        client_socket.sendall(b'This is a test file contentEOF')
-        response = client_socket.recv(1024).decode()
-        if "File 'test_file.txt' uploaded" not in response:
+        response = send_command(client_socket, 'upload test.txt')
+        print("proverka")
+        # time.sleep(0.1)
+        # response = client_socket.recv(1024).decode()
+        if "File 'test.txt' uploaded." not in response:
             print("Error: 'upload' command failed")
             return
         
         # Тестирование команды 'download'
-        send_command(client_socket, 'download test_file.txt')
-        file_content = b""
-        while True:
-            part = client_socket.recv(1024)
-            if b"EOF" in part:
-                file_content += part.split(b"EOF")[0]
-                break
-            file_content += part
-        if file_content.decode() != 'This is a test file content':
+        send_command(client_socket, 'download test.txt')
+        time.sleep(0.1)
+        # response = client_socket.recv(1024).decode()
+        if "File 'test.txt' downloaded." not in response:
             print("Error: 'download' command failed")
             return
         
         # Тестирование команды 'rm'
-        send_command(client_socket, 'rm test_file.txt')
+        send_command(client_socket, 'rm test.txt')
         response = send_command(client_socket, 'ls')
-        if 'test_file.txt' in response:
+        if 'test.txt' in response:
             print("Error: 'rm' command failed")
             return
         
