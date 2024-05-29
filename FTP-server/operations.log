@@ -1,0 +1,502 @@
+User admin request: users
+User admin request: setquota user1 5000
+User admin request: deluser user2
+User user1 request: ls
+User user1 request: upload test.txt
+User user1 request: mkdir papka
+User user1 request: rmdir papka
+User user1 request: git branch
+User user1 request: exit
+User user2 request: ls
+User user2 request: upload test1.txt
+User user2 request: exit
+User admin request: ls
+User admin request: users
+User admin request: exit
+User admin request: ls
+User admin request: users
+User admin request: exit
+User admin request: users
+User admin request: setquota user1 5000
+User admin request: deluser user2
+User admin request: ls
+User user2 request: exit
+User admin request: exit
+User admin request: exit
+User user2 request: ls
+User user2 request: upload test1.txt
+User user2 request: exit
+User admin request: exit
+User user1 request: exit
+User admin request: users
+User admin request: setquota user1 5000
+User admin request: deluser user2
+User admin request: ls
+User admin request: mkdir test_folder
+User user1 request: mkdir papka
+User user1 request: exit
+User user1 request: exit
+User admin request: users
+User admin request: exit
+User admin request: ls
+User admin request: users
+User admin request: users
+User admin request: adduser user3 password3 1024
+User admin request: users
+User admin request: exit
+User user2 request: ls
+User user2 request: exit
+User admin request: users
+User admin request: adduser user4 password4
+User admin request: adduser user4 password4 1024
+User admin request: users
+User admin request: user
+User admin request: users
+User admin request: exit
+User user4 request: ls
+User user4 request: exit
+User admin request: users
+User admin request: adduser newuser newpassword 5000
+User admin request: users
+User admin request: setquota newuser 10000
+User admin request: deluser newuser
+User admin request: ls
+User admin request: exit
+User admin request: ls
+User admin request: exit
+User admin request: users
+User admin request: adduser newuser newpassword 5000
+User admin request: users
+User admin request: setquota newuser 10000
+User admin request: deluser newuser
+User admin request: ls
+User admin request: mkdir test_folder
+User admin request: users
+User admin request: users
+User admin request: deluser user3
+User admin request: deluser user4
+User admin request: ls
+User admin request: deluser user2
+User admin request: adduser user2 password2 20480
+User admin request: exit
+User user1 request: ls
+User user1 request: upload test1.txt
+User user1 request: upload test2.txt
+User user1 request: download test.txt
+User user1 request: rename test.txt test1.txt
+User user1 request: upload test3.txt
+User user1 request: rm test3.txt
+User user1 request: rmdir papka
+User user1 request: mkdir papka
+User user1 request: rmdir papka
+User user1 request: rm test2.txt
+User user1 request: exit
+User admin request: users
+User admin request: adduser user3 password3 1024
+User admin request: exit
+User user3 request: upload test.txt
+User user3 request: upload test2.txt
+User user3 request: upload test3.txt
+User user3 request: rm test3.txt
+User user3 request: rm test2.txt
+User user3 request: rm test.txt
+User user3 request: exit
+User admin request: dlluser user3
+User admin request: deluser user3
+User admin request: exit
+User user1 request: ls
+User user1 request: exit
+User user2 request: upload test2.txt
+User user2 request: exit
+User admin request: users
+User admin request: adduser newuser newpassword 5000
+User admin request: users
+User admin request: setquota newuser 10000
+User admin request: deluser newuser
+User admin request: ls
+User admin request: mkdir test_folder
+User admin request: ls
+User admin request: rmdir test_folder
+User admin request: exit
+User admin request: users
+User admin request: adduser newuser newpassword 5000
+User admin request: users
+User admin request: setquota newuser 10000
+User admin request: deluser newuser
+User admin request: ls
+User admin request: exit
+User admin request: users
+User admin request: adduser newuser newpassword 5000
+User admin request: users
+User admin request: setquota newuser 10000
+User admin request: deluser newuser
+User admin request: ls
+User admin request: mkdir test_folder
+User admin request: users
+User admin request: adduser newuser newpassword 5000
+User admin request: users
+User admin request: setquota newuser 10000
+User admin request: deluser newuser
+User admin request: ls
+User admin request: exit
+User admin request: rmdir test_folder
+User admin request: exit
+User admin request: users
+User admin request: adduser newuser newpassword 5000
+User admin request: users
+User admin request: setquota newuser 10000
+User admin request: deluser newuser
+User admin request: ls
+User admin request: mkdir test_folder
+User admin request: rmdir test_folder
+User admin request: exit
+User admin request: users
+User admin request: adduser newuser newpassword 5000
+User admin request: users
+User admin request: setquota newuser 10000
+User admin request: deluser newuser
+User admin request: ls
+User admin request: mkdir test_folder
+User admin request: ls
+User admin request: users
+User admin request: adduser newuser newpassword 5000
+User admin request: users
+User admin request: setquota newuser 10000
+User admin request: deluser newuser
+User admin request: ls
+User admin request: exit
+User admin request: rmdir test_folder
+User admin request: users
+User admin request: adduser newuser newpassword 5000
+User admin request: users
+User admin request: setquota newuser 10000
+User admin request: deluser newuser
+User admin request: ls
+User admin request: mkdir test_folder
+User admin request: users
+User admin request: adduser newuser newpassword 5000
+User admin request: users
+User admin request: setquota newuser 10000
+User admin request: deluser newuser
+User admin request: ls
+User admin request: rmdir test_folder
+User admin request: users
+User admin request: adduser newuser newpassword 5000
+User admin request: users
+User admin request: setquota newuser 10000
+User admin request: deluser newuser
+User admin request: ls
+User admin request: mkdir test_folder
+User admin request: users
+User admin request: exit
+User user1 request: rm test1.txt
+User user1 request: ls
+User user1 request: upload test.txt
+User user1 request: upload test2.txt
+User user1 request: upload test3.txt
+User admin request: users
+User admin request: exit
+User user1 request: upload test.txt
+User admin request: users
+User admin request: adduser newuser newpassword 5000
+User admin request: users
+User admin request: setquota newuser 10000
+User admin request: deluser newuser
+User admin request: ls
+User admin request: exit
+User user1 request: exit
+User admin request: ls
+User admin request: rmdir test_folder
+User admin request: users
+User admin request: adduser newuser newpassword 5000
+User admin request: users
+User admin request: setquota newuser 10000
+User admin request: deluser newuser
+User admin request: ls
+User admin request: mkdir test_folder
+User admin request: rmdir test_folder
+User admin request: users
+User admin request: adduser newuser newpassword 5000
+User admin request: users
+User admin request: setquota newuser 10000
+User admin request: deluser newuser
+User admin request: ls
+User admin request: mkdir test_folder
+User admin request: rmdir test_folder
+User admin request: mkdir test_folder
+User admin request: rmdir test_folder
+User admin request: ls
+User admin request: users
+User admin request: adduser newuser newpassword 5000
+User admin request: users
+User admin request: setquota newuser 10000
+User admin request: deluser newuser
+User admin request: ls
+User admin request: mkdir test_folder
+User admin request: users
+User admin request: adduser newuser newpassword 5000
+User admin request: users
+User admin request: setquota newuser 10000
+User admin request: deluser newuser
+User admin request: ls
+User admin request: exit
+User admin request: rmdir test_folder
+User admin request: users
+User admin request: adduser newuser newpassword 5000
+User admin request: users
+User admin request: setquota newuser 10000
+User admin request: deluser newuser
+User admin request: ls
+User admin request: mkdir test_folder
+User admin request: rmdir test_folder
+User admin request: users
+User admin request: adduser newuser newpassword 5000
+User admin request: users
+User admin request: setquota newuser 10000
+User admin request: deluser newuser
+User admin request: ls
+User admin request: mkdir "test_folder"
+User admin request: users
+User admin request: adduser newuser newpassword 5000
+User admin request: users
+User admin request: setquota newuser 10000
+User admin request: deluser newuser
+User admin request: ls
+User admin request: mkdir test_folder
+User admin request: rmdir test_folder
+User admin request: users
+User admin request: adduser newuser newpassword 5000
+User admin request: users
+User admin request: setquota newuser 10000
+User admin request: deluser newuser
+User admin request: ls
+User admin request: mkdir test_folder
+User admin request: rmdir test_folder
+User admin request: users
+User admin request: adduser newuser newpassword 5000
+User admin request: users
+User admin request: setquota newuser 10000
+User admin request: deluser newuser
+User admin request: ls
+User admin request: mkdir test_folder
+User admin request: ls
+User admin request: mkdir papka
+User admin request: rmdir papka
+User admin request: ls
+User admin request: mkdir papka
+User admin request: users
+User admin request: adduser newuser newpassword 5000
+User admin request: users
+User admin request: setquota newuser 10000
+User admin request: deluser newuser
+User admin request: ls
+User admin request: exit
+User admin request: rmdir test_folde
+User admin request: rmdir test_folder
+User admin request: rmdir papka
+User admin request: users
+User admin request: adduser newuser newpassword 5000
+User admin request: users
+User admin request: setquota newuser 10000
+User admin request: deluser newuser
+User admin request: ls
+User admin request: mkdir test_folder
+User admin request: ls
+User admin request: rmdir test_folder
+User admin request: rmdir test_folder
+User admin request: exit
+User user2 request: mkdir papka
+User user2 request: rmdir papka
+User user2 request: ls
+User user2 request: ls
+User user2 request: exit
+User user2 request: download test2.txt
+User user2 request: download test2.txt
+User user2 request: rename test2.txt test.txt
+User user2 request: rename test.txt test2.txt
+User user2 request: upload test.txt
+User user2 request: download test.txt
+User admin request: users
+User admin request: adduser newuser newpassword 5000
+User admin request: users
+User admin request: setquota newuser 10000
+User admin request: deluser newuser
+User admin request: ls
+User admin request: mkdir test_folder
+User admin request: ls
+User admin request: rmdir test_folder
+User admin request: ls
+User admin request: upload test.txt
+User admin request: users
+User admin request: adduser newuser newpassword 5000
+User admin request: users
+User admin request: setquota newuser 10000
+User admin request: deluser newuser
+User admin request: ls
+User admin request: mkdir test_folder
+User admin request: ls
+User admin request: rmdir test_folder
+User admin request: ls
+User admin request: upload test.txt
+User admin request: users
+User admin request: adduser newuser newpassword 5000
+User admin request: users
+User admin request: setquota newuser 10000
+User admin request: deluser newuser
+User admin request: ls
+User admin request: mkdir test_folder
+User admin request: ls
+User admin request: rmdir test_folder
+User admin request: ls
+User admin request: upload test.txt
+User admin request: upload test.txt
+User user2 request: upload test.txt
+User user2 request: rm test.txt
+User user2 request: exit
+User admin request: upload test.txt
+User admin request: ls
+User admin request: upload test.txt
+User admin request: upload test.txt
+User admin request: rm test.txt
+User admin request: users
+User admin request: adduser newuser newpassword 5000
+User admin request: users
+User admin request: setquota newuser 10000
+User admin request: deluser newuser
+User admin request: ls
+User admin request: mkdir test_folder
+User admin request: ls
+User admin request: rmdir test_folder
+User admin request: ls
+User admin request: upload test.txt
+User admin request: users
+User admin request: adduser newuser newpassword 5000
+User admin request: users
+User admin request: setquota newuser 10000
+User admin request: deluser newuser
+User admin request: ls
+User admin request: mkdir test_folder
+User admin request: ls
+User admin request: rmdir test_folder
+User admin request: ls
+User admin request: upload test.txt
+User admin request: users
+User admin request: adduser newuser newpassword 5000
+User admin request: users
+User admin request: setquota newuser 10000
+User admin request: deluser newuser
+User admin request: ls
+User admin request: mkdir test_folder
+User admin request: ls
+User admin request: rmdir test_folder
+User admin request: ls
+User admin request: upload test.txt
+User admin request: upload test.txt
+User admin request: rm test.txt
+User admin request: users
+User admin request: adduser newuser newpassword 5000
+User admin request: users
+User admin request: setquota newuser 10000
+User admin request: deluser newuser
+User admin request: ls
+User admin request: mkdir test_folder
+User admin request: ls
+User admin request: rmdir test_folder
+User admin request: ls
+User admin request: upload test.txt
+User admin request: .
+User admin request: ls
+User admin request: users
+User admin request: adduser newuser newpassword 5000
+User admin request: users
+User admin request: setquota newuser 10000
+User admin request: deluser newuser
+User admin request: ls
+User admin request: mkdir test_folder
+User admin request: ls
+User admin request: rmdir test_folder
+User admin request: ls
+User admin request: upload test.txt
+User admin request: users
+User admin request: adduser newuser newpassword 5000
+User admin request: users
+User admin request: setquota newuser 10000
+User admin request: deluser newuser
+User admin request: ls
+User admin request: mkdir test_folder
+User admin request: ls
+User admin request: rmdir test_folder
+User admin request: ls
+User admin request: ls
+User admin request: upload test.txt
+User admin request: ó÷øå
+User admin request: exit
+User admin request: rm test.txt
+User admin request: ls
+User admin request: upload test3.txt
+User admin request: ls
+User admin request: exit
+User admin request: upload test.txt
+User admin request: download test.txt
+User admin request: rm test.txt
+User admin request: exit
+User admin request: ls
+User admin request: mkdir papka
+User admin request: ls
+User admin request: ls
+User admin request: rmdir papka
+User admin request: mkdir papka
+User admin request: users
+User admin request: adduser newuser newpassword 5000
+User admin request: users
+User admin request: setquota newuser 10000
+User admin request: deluser newuser
+User admin request: ls
+User admin request: exit
+User admin request: rmdir papka
+User admin request: rm test3.txt
+User admin request: users
+User admin request: adduser newuser newpassword 5000
+User admin request: users
+User admin request: setquota newuser 10000
+User admin request: deluser newuser
+User admin request: ls
+User admin request: mkdir test_folder
+User admin request: ls
+User admin request: rmdir test_folder
+User admin request: ls
+User admin request: upload test.txt
+User admin request: exit
+User admin request: users
+User admin request: adduser newuser newpassword 5000
+User admin request: setquota newuser 10000
+User admin request: deluser newuser
+User admin request: ls
+User admin request: mkdir test_folder
+User admin request: ls
+User admin request: rmdir test_folder
+User admin request: ls
+User admin request: upload test.txt
+User admin request: rm test.txt
+User admin request: users
+User admin request: adduser newuser newpassword 5000
+User admin request: users
+User admin request: setquota newuser 10000
+User admin request: deluser newuser
+User admin request: ls
+User admin request: mkdir test_folder
+User admin request: ls
+User admin request: rmdir test_folder
+User admin request: ls
+User admin request: upload test.txt
+User admin request: users
+User admin request: adduser newuser newpassword 5000
+User admin request: users
+User admin request: setquota newuser 10000
+User admin request: deluser newuser
+User admin request: ls
+User admin request: mkdir test_folder
+User admin request: ls
+User admin request: rmdir test_folder
+User admin request: ls
+User admin request: upload test.txt
