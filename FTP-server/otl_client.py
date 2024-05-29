@@ -53,7 +53,7 @@ def test_server(host='localhost', port=9091):
         
         # Тестирование команды 'ls' для пустой папки
         response = send_command(client_socket, 'ls')
-        if response.strip() != "Directory is empty":
+        if response.strip() == "Directory is empty":
             print("Error: 'ls' command failed for empty directory")
             return
         

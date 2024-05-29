@@ -1,4 +1,5 @@
 import socket
+import os
 
 def start_client(host='localhost', port=9091):
     client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -22,10 +23,14 @@ def start_client(host='localhost', port=9091):
         
         if command == 'upload' and len(args) == 1:
             filename = args[0]
-            filecontent = input('File content: ')
-            client_socket.sendall(filecontent.encode() + b"EOF")
-            response = client_socket.recv(1024).decode()
-            print(response)
+            if os.path.exists(filename):
+                with open(filename, 'rb') as file:
+                    file_content = file.read()
+                client_socket.sendall(file_content + b"EOF")
+                response = client_socket.recv(1024).decode()
+                print(response)
+            else:
+                print(f"File '{filename}' not found.")
         
         elif command == 'download' and len(args) == 1:
             filename = args[0]
@@ -39,20 +44,10 @@ def start_client(host='localhost', port=9091):
             print(f"File '{filename}' downloaded.")
             continue
         
-        elif command in ['ls', 'exit', 'users']:
+        elif command == 'ls' or command == 'exit' or command.startswith('adduser') or command.startswith('setquota') or command.startswith('deluser') or command == 'users':
             response = client_socket.recv(1024).decode()
             print(response)
         
-        elif command == 'setquota' and len(args) == 1:
-            client_socket.send(request.encode())
-            response = client_socket.recv(1024).decode()
-            print(response)
-        
-        elif command == 'deluser' and len(args) == 1:
-            client_socket.send(request.encode())
-            response = client_socket.recv(1024).decode()
-            print(response)
-
         if command == 'exit':
             break
 

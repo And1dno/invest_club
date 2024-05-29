@@ -51,9 +51,9 @@ def check_quota(user_dir, username):
 
 def authenticate(client_socket):
     try:
-
+        
         username = client_socket.recv(1024).decode().strip()
-
+        
         password = client_socket.recv(1024).decode().strip()
         if username in users_db and users_db[username]['password'] == password:
             auth_logger.info(f"User {username} logged in")
